@@ -1,0 +1,72 @@
+//* Note Here i am using open source nginx image you can replace it with required image name
+
+docker version
+(returns the version for the client and server)
+
+docker info
+(returnns the configuration of docker engine)
+
+docker
+(list the available commands for docker)
+
+docker container run --publish 80:80 nginx
+(Runs the docker container and exposes the port 80 for port forwarding of the running container)
+
+docker container run --publish 80:80 --detach nginx
+(Runs the docker container and exposes the port 80 for port forwarding of the running container but in background)
+
+docker container run --publish 80:80 --detach --name webhost nginx
+(Runs the docker container and also specify the name as webhost for the container)
+PS(Instead of using --publish you can also use --p instead and --d for detach too)
+
+docker container ls
+(list all the running containers)
+
+docker ps
+(list all the running containers but this is an old way to list containers)
+
+docker container ls -a
+(list all the running containers as well as stopped containers too)
+
+docker container start {{containerId}}
+(start the running container with speficified id)
+
+docker container stop {{containerId}}
+(stop the running container with specified id)
+
+docker container rm {{containerId}}
+(To stop the running container)
+
+docker container rm -f {{containerId}}
+(To remove the running container forcefully)
+
+docker container rm {{container1_id}} {{container2_id}}
+(To remove multiple containers)
+
+docker container logs {{containerId}}
+(To retrieve logs of the container)
+
+docker container logs {{container_name}}
+(To retrieve logs of the container by container name)
+
+docker container top {{container_name}}
+(To list the processes inside that container)
+
+docker container inspect {{container_name}}
+(Details of the container config)
+
+docker container stats
+(Peformance stats for all the container running
+
+docker container run -it nginx bash
+(-i -> interactive -t -> tty runs a container with interactive bash)
+
+docker container exec -it {{containerId}} bash
+(To go inside a running container bash)
+
+docker pull {{imageName}}
+(To pull images)
+
+docker image ls
+(list all local images)
+
