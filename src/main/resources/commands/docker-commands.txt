@@ -70,3 +70,29 @@ docker pull {{imageName}}
 docker image ls
 (list all local images)
 
+docker container port {{container_name}}
+(To fetch the port information)
+
+docker container inspect --format {{.NetworkSetting.IPAddress}} webhost(container_name)
+(To retrieve the ip information of the container)
+
+docker network ls
+(To list all networks)
+
+NOTE: bridge is default network for docker containers.
+
+docker network inspect {{network_name}}
+(Get the info related to particular network)
+
+docker network create {{network_name}}
+(Create a new network)
+
+docker container run --name nginx2 --network {{network_name}} nginx
+(To run a container inside our newly created network)
+
+docker network connect {{network_id}} {{container_id}}
+(To connect to specfic network)
+
+docker network disconnect {{network_id}} {{container_id}}
+(To disconnect from specfic network)
+
