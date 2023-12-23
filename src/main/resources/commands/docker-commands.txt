@@ -17,7 +17,7 @@ docker container run --publish 80:80 --detach nginx
 
 docker container run --publish 80:80 --detach --name webhost nginx
 (Runs the docker container and also specify the name as webhost for the container)
-PS(Instead of using --publish you can also use --p instead and --d for detach too)
+PS(Instead of using --publish you can also use -p instead and -d for detach too)
 
 docker container ls
 (list all the running containers)
