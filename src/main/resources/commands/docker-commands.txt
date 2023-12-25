@@ -67,8 +67,18 @@ docker container exec -it {{containerId}} bash
 docker pull {{imageName}}
 (To pull images)
 
+docker pull image {{image_name}}:{{tagName}}
+(To pull specific version of that image)
+(tagName is basically the version of that particular image)
+
 docker image ls
 (list all local images)
+
+docker image history {{image_name}}:{{tagName}}
+(To fetch history related to that image)
+
+docker image inspect {{image_name}}
+(returns metadata about the image)
 
 docker container port {{container_name}}
 (To fetch the port information)
@@ -95,4 +105,8 @@ docker network connect {{network_id}} {{container_id}}
 
 docker network disconnect {{network_id}} {{container_id}}
 (To disconnect from specfic network)
+
+docker container exec -it {{container1_name}} ping {{container2_name}}
+(To ping one container to other container)
+Note: You can only ping two containers if they are in the same network.
 
