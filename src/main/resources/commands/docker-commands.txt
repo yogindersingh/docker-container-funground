@@ -110,3 +110,17 @@ docker container exec -it {{container1_name}} ping {{container2_name}}
 (To ping one container to other container)
 Note: You can only ping two containers if they are in the same network.
 
+docker image tag nginx {{newName}}
+(If you want to tag existing image to a new tag)
+
+docker image tag {{newName}}:1.1
+(if you want to tag existing image with specfic version)
+
+docker image push {{image_tag}}
+(To push image to docker hub repository)
+
+docker image build -t {{tagName}}
+(To build docker file (-t stands for tag))
+Note: Default docker file name is Dockerfile and if you want to specify different custom name we can use -f flag)
+
+
