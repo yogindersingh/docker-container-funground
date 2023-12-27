@@ -119,8 +119,22 @@ docker image tag {{newName}}:1.1
 docker image push {{image_tag}}
 (To push image to docker hub repository)
 
-docker image build -t {{tagName}}
+docker image build . -t {{tagName}}
 (To build docker file (-t stands for tag))
 Note: Default docker file name is Dockerfile and if you want to specify different custom name we can use -f flag)
 
+docker image build -f filename -t {{tagName}}
+(To build docker file with custom name)
+
+docker image prune
+(To clean up dangling images)
+
+docker system prune
+(clean up everything)
+
+docker image prune -a
+(clean all images we are not using)
+
+docker system df
+(To see space usage)
 
