@@ -7,6 +7,9 @@ For reference some of the docker commands are present in the commands directory.
 # Docker files
 For reference some of the docker filed are present in the dockerFiles directory.
 
+# docker-compose files
+For reference some of the docker compose file are present in the docker-compose-files directory.
+
 # Git Repository
 https://github.com/yogindersingh/docker-container-funground
 

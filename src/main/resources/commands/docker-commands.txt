@@ -156,4 +156,17 @@ docker volume create
 docker container run -v ${pwd}:/var/lib/mysql
 (bind host directory to container directory)
 
+docker compose up
+(start all services)
+
+docker compose down
+(stop all services)
+
+docker compose logs
+(To retrieve the logs)
+
+docker compose ps
+(List the processes)
+
+
 
