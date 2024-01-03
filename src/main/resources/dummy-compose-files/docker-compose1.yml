@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  jekyll:
+    image: jekyll/builder
+    volumes:
+      - ./:site
+    ports:
+      - '80:4000'
+    environment:
+      env1: value

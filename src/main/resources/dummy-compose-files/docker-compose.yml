@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  proxy:
+    image: nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx:config
+    environment:
+      env1: 1
+  web:
+    image: httpd
