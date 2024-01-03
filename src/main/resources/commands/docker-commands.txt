@@ -138,3 +138,22 @@ docker image prune -a
 docker system df
 (To see space usage)
 
+docker volume prun
+(To release dangling volumes)
+
+docker volume ls
+(List volumes)
+
+docker volume inspect {{volumeId}}
+(list volume config)
+
+docker container run -v mysql-db:/var/lib/mysql
+(for named volume creation for container)
+
+docker volume create
+(to create volumes)
+
+docker container run -v ${pwd}:/var/lib/mysql
+(bind host directory to container directory)
+
+
