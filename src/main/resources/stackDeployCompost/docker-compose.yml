@@ -1,0 +1,10 @@
+version : "3"
+
+services:
+  nginx:
+    image: nginx
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        delay: 10s

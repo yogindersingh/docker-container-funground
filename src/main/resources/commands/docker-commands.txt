@@ -168,5 +168,39 @@ docker compose logs
 docker compose ps
 (List the processes)
 
+docker swarm init
+(To intialize swarm as it is not enabled by default)
 
+docker node ls
+(list all the active nodes)
+
+docker service create {{image}}
+(To create service for specified image)
+
+docker service ls
+(list all services)
+
+docker service ps {{serviceId}}
+(list the processes running for particular service id)
+
+docker service update {{serviceId}} --replicas 3
+(To update any running service)
+
+docker service rm {{serviceid}}
+(To remove any service)
+
+docker stack deploy -c {{composefile.yml}}
+(To deploy a stack using composeyml)
+
+docker stack ls
+(To list stacks )
+
+docker stack ps {{stackName}}
+(To check running processes for particular stack)
+
+docker stack services {{stackname}}
+(to check services running for particular stack)
+
+docker stack rm {{stackname}}
+(to remove any stack)
 
