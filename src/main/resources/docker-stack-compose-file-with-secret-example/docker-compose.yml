@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    secrets:
+      - username
+      - password
+    environment:
+      POSTGRES_PASSWORD: /run/secrets/username
+      POSTGRES_USER: /run/secrets/password
+
+secrets:
+  username:
+    file: password.txt
+  password:
+    file: username.txt

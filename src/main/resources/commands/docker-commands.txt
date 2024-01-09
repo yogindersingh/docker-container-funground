@@ -204,3 +204,12 @@ docker stack services {{stackname}}
 docker stack rm {{stackname}}
 (to remove any stack)
 
+docker secret create user_name username.txt
+(To create secrets)
+
+docker secret ls
+(To list secrets)
+
+docker service update --secret --rm
+(To remove secret for a docker service)
+
