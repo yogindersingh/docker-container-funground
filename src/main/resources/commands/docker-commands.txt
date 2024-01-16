@@ -138,7 +138,7 @@ docker image prune -a
 docker system df
 (To see space usage)
 
-docker volume prun
+docker volume prune
 (To release dangling volumes)
 
 docker volume ls
