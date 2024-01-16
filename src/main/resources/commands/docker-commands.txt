@@ -213,3 +213,12 @@ docker secret ls
 docker service update --secret --rm
 (To remove secret for a docker service)
 
+docker service scale {{serviceame}}=5
+(To scale up the service)
+
+docker service update --image nginx:1.12 {{servicename}}
+(To update the image for the service)
+
+docker service update --publish -rm 8088 --publish -add 9090:80 {{servicename}}
+(If we want to change the port we have to remove the port and add the new port)
+
