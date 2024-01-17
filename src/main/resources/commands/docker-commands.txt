@@ -222,3 +222,14 @@ docker service update --image nginx:1.12 {{servicename}}
 docker service update --publish -rm 8088 --publish -add 9090:80 {{servicename}}
 (If we want to change the port we have to remove the port and add the new port)
 
+#DOCKER REGISTRY
+docker container run -p 5000:5000 --name registry registry
+(To run docker registry on local)
+
+docker image push {ipAddressforLocalRegistry}:{portnumber}/{name}
+(To push image to docker registry on local)
+
+docker image pull {ipAddressforLocalRegistry}:{portnumber}/{name}
+(To pull images from local registry)
+
+
