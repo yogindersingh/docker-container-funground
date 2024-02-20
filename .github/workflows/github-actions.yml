@@ -46,7 +46,7 @@ jobs:
           tags: tag1
 
       - name : Debug more
-        run: echo "tagys is ${{ steps.metadata.outputs.tags }} labels is ${{ steps.metadata.outputs.labels }} image ${{ env.IMG_NAME }}"
+        run: echo "tagys is ${{ steps.metadata.outputs.tags }} labels is ${{ steps.metadata.outputs.labels }} image ${{ env.IMG_NAME }} githubrefype ${{ github.ref_type }}"
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v1
