@@ -18,7 +18,7 @@ For reference some of the docker swarm stack compose files are present in the re
 https://github.com/yogindersingh/docker-container-funground
 
 # Docker hub Repository
-https://hub.docker.com/repository/docker/yoginder757/docker-playground/general
+https://hub.docker.com/repository/docker/yogindersingh/docker-playground/general
 
 # Docker documentation
 https://docs.docker.com/
