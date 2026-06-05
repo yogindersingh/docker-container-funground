@@ -1,33 +1,48 @@
 # docker-container-funground
-This repository serves as a comprehensive resource for Docker-related content, providing a curated collection of Dockerfiles, configuration files, and best practices for containerization.
-A guide to create any maven project and contanerize it using docker.
 
-# Docker commands
-For reference some of the docker commands are present in the commands directory.
+A Spring Boot REST application demonstrating how to containerize a Maven project with Docker. The repository also includes a curated collection of reference Dockerfiles, docker-compose files, and Docker command examples.
 
-# Docker files
-For reference some of the docker filed are present in the dockerFiles directory.
+## Application
 
-# docker-compose files
-For reference some of the docker compose file are present in the docker-compose-files directory.
+- **Endpoint:** `GET http://localhost:9001/` → `"Dockerizing Spring Boot Application"`
+- **Stack:** Java 17, Spring Boot 3.2.1, Maven
 
-# docker swarm stack compose file
-For reference some of the docker swarm stack compose files are present in the resources directory.
+## Build Commands
 
-# Git Repository
-https://github.com/yogindersingh/docker-container-funground
-
-# Docker hub Repository
-https://hub.docker.com/repository/docker/yogindersingh/docker-playground/general
-
-# Docker documentation
-https://docs.docker.com/
-
-# Build commands 
-
-To build the project and create image also
+```bash
+# Build and create Docker image
 mvn clean install -DskipTests -Dprofile=containerizeapp
 
-To build the project without creating image
+# Build locally without creating Docker image
 mvn clean install -DskipTests -Dprofile=local
 
+# Run tests
+mvn test
+```
+
+## Run
+
+```bash
+# Run the JAR directly
+java -jar target/docker-playground.jar
+
+# Build and run as a Docker container
+docker build -t docker-playground:latest .
+docker run -p 9001:9001 docker-playground:latest
+```
+
+## Reference Resources
+
+| Directory | Contents |
+|-----------|----------|
+| `src/main/resources/commands/` | Docker CLI command reference |
+| `src/main/resources/dockerFiles/` | Example Dockerfiles (Nginx, Node.js, Java) |
+| `src/main/resources/docker-compose-files/` | Example docker-compose configurations |
+| `src/main/resources/stackDeployCompost/` | Docker Swarm stack deployment examples |
+| `src/main/resources/docker-stack-compose-file-with-secret-example/` | Secret management examples |
+
+## Links
+
+- **Git Repository:** https://github.com/yogindersingh/docker-container-funground
+- **Docker Hub:** https://hub.docker.com/repository/docker/yogindersingh/docker-playground/general
+- **Docker Documentation:** https://docs.docker.com/
